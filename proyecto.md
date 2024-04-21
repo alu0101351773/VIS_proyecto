@@ -91,4 +91,24 @@ El caso de **Fasnia** es el opuesto al puerto, pues la distribución de activida
 
 ## Distribución de edad en poblaciones afectadas
 
+Hasta ahora se ha observado una proporción de trabajadores del sector de la construcción y de la industria elevada en Fasnia, municipio afectado por muertes del sistema circulatorio. Sin embargo, las estadísticas del Puerto de la Cruz no parecen mostrar ese porcentaje de población.
 
+Buscando posibles relaciones entre datos, he analizado también la distribución de edades de las poblaciones afectadas en busca de posibles patrones de datos.
+
+### Patrones de edad en San Miguel de Abona
+
+<img src="./img/distribucion_edad_abona.png" style="width:1100px">
+
+Se observa que la proporción de población de edad avanzada (65 años o más) en San Miguel de Abona es pequeña, mientras que la proporción de la población jóven (de 0 a 14 años) es elevada.
+
+### Patrones de edad en Puerto de la Cruz
+
+<img src="./img/distribucion_edad_puerto_cruz.png" style="width:1100px">
+
+La franja de edad avanzada en el municipio es bastante mayor, debido en parte a ser un municipio turístico donde residen muchos turistas ancianos.
+
+### Patrones de edad en Fasnia
+
+<img src="./img/distribucion_edad_fasnia.png" style="width:1100px">
+
+La franja de edad avanzada en este municipio es similar a la observada en Puerto de la Cruz, con mayor abundancia de población mayor de 85 años. Esta mayor proporción de población mayor en ambos municipios podría tener relación con la mayor tasa de defunciones por enfermedades circulatorias, lo que sería objeto de investigación.
