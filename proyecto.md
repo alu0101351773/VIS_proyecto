@@ -3,13 +3,49 @@
 * **Autor:** Jorge Cabrera Rodríguez
 * **Email:** alu0101351773@ull.edu.es
 
-## Análisis de defunciones
+## Generación de gráficos
 
-Lo primero que he explorado en este proyecto de visualización son las defunciones por tipo en diferentes municipios canarios. Para esto me he limitado a los municipios de la isla de Tenerife, pues es la isla com más municipios de la que más información variada se podrá extraer.
+### Elementos incluídos en los gráficos según la gramática de gráficos
+
+* Álgebra: Se han realizado uniones mediante variables de dataframes, con el objetivo de obtener nuevas variables que sean de utilidad a la hora de graficar la información.
+
+* Escala: No se ha realizado ningún tipo de escalado sobre los datos, para conservar sus escalas originales.
+
+* Estadística: No se ha calculado ninguna métrica de frecuencia, pues los valores nulos del conjunto de datos fueron rellenados con 0.
+
+* Geometría: Se han escogido principalmente gráficos de barras para representar las enfermedades por municipio, pues permiten mostrar información de muchas enfermedades sin perder demasiada claridad. Ejemplo de esto es la siguiente imágen:
+
+<img src="./img/def_tenerife_2019.png" style="width:1100px">
+
+* Coordenadas: Las coordenadas escogidas han sido coordenadas cartesianas clásicas por su fácil entendimiento, y porque se adecúan correctamente a los gráficos de barras.
+
+* Estéticas: Se han realizado gráficos de barras con barras anchas para diferenciar visualmente los datos de cada enfermedad. Además, se han escogido paletas de color distingibles, de tal forma que el elevado número de enfermedades sea distingible. Además, se ha buscado ajustar el tamaño de letra de los nombres de municipios para evitar que se solapen entre sí y pierdan legibilidad.
+
+### Características que cumple el gráfico según los principios de diseño
+
+* Tema: Se tratan de colores diferenciados pero no demasiado vibrantes, con menor cantidad de contraste. Su objetivo es que causen menor fatiga visual.
+
+* Propósito de color: Ya que no existe enfermedad mejor que otra, no se pueden asignar colores por 'positividad'.
+
+* Uso del color: Los mapas han sido realizados con paletas de color secuenciales para demostrar la 'progresión' o número de muertes. Los gráficos de enfermedad o de franja de edad han sido realizados con paletas de color categóricas, pues cada categoría no tiene significado numérico cuantizable.
+
+* Forma: Se han escogido gráficos horizontales para las enfermedades por municipio para facilitar la lectura de los nombres de municipios.
+
+### Recomendaciones de diseño que se han seguido para conseguir un gráfico de calidad
+
+* Mostrar información de defunciones en gráfico de barras únicamente de una isla (en este caso Tenerife), pues un exceso de municipios dificulta en gran medida la lectura de datos.
+
+* Dividir la información de sector laboral y de franjas de edad según el año ordenado de manera ascendente, para así poder visualizar tanto los gráficos como el progreso de los datos a lo largo del tiempo.
+
+## Análisis de historias
+
+### Análisis de defunciones
+
+Lo primero que he explorado en este proyecto de visualización son las defunciones por tipo en diferentes municipios canarios. Para esto me he limitado a los municipios de la isla de Tenerife, pues es la isla con más municipios de la que más información variada se podrá extraer.
 
 Esta información la he desglosado por año, dando como resultado los siguientes gráficos:
 
-### Defunciones por municipio en 2019
+#### Defunciones por municipio en 2019
 
 <img src="./img/def_tenerife_2019.png" style="width:1100px">
 
@@ -28,7 +64,7 @@ Existen algunos municipios anómalos que no presentan enfermedades comunes, como
 
 En este gráfico destacan las elevadas muertes por **tumores** y **enfermedades del sistema circulatorio** ocurridas en el **Puerto de la Cruz** y **Fasnia**. Estos datos resultan curiosos, sobre todo sabiendo que la población de estas zonas es notablemente menor que la de municipios como **San Cristobal de La Laguna** o **Santa Cruz de Tenerife**.
 
-### Defunciones por municipio en 2020
+#### Defunciones por municipio en 2020
 
 <img src="./img/def_tenerife_2020.png" style="width:1100px">
 
@@ -40,13 +76,13 @@ En este nuevo gráfico se puede observar cómo ciertos municipios han variado dr
 
 En este gráfico me han llamado la atención dos municipios: Puerto de la Cruz y Fasnia. En ambos, las muertes por defunciones se siguen manteniendo extremadamente elevadas, y con resultados similares al año anterior.
 
-### Defunciones por municipio en 2021
+#### Defunciones por municipio en 2021
 
 <img src="./img/def_tenerife_2021.png" style="width:1100px">
 
 En este gráfico volvemos a observar la elevada cantidad de defunciones en **Puerto de la Cruz** y **Fasnia** mantenidas en el tiempo. Por esto, he decidido observar en detalle la información de estos municipios.
 
-## Visualización de muertes por **tumores** y **enfermedades circulatorias** en Tenerife
+### Visualización de muertes por **tumores** y **enfermedades circulatorias** en Tenerife
 
 Para comprobar la frecuencia de las muertes por **tumores** y **enfermedades circulatorias**, se han plasmado en un mapa de frecuencias. Aquellos municipios sin datos de defunciones no aparecen representados en el mapa, dando el siguiente resultado:
 
@@ -63,19 +99,19 @@ En este otro mapa (mucho más acentuado que el anterior) se pueden observar muni
 * **Los Silos** con valores intermedios en 2019 y 2021 y un repunte muy elevado en 2020.
 * **Fasnia** con los valores elevados más constantes de todo el mapa durante 3 años.
 
-## Distribución de ocupación laboral en poblaciones afectadas
+### Distribución de ocupación laboral en poblaciones afectadas
 
 Como se ha observado en los anteriores gráficos, parece haber un patrón de defunciones elevado en los municipios de **Puerto de la Cruz** (tumores y Enfermedades circulatorias) y **Fasnia** (Enfermedades Circulatorias).
 
 Se me ha ocurrido investigar la posible relación de estas defunciones respecto a sus principales sectores de ocupación laboral, en busca de algún patrón. Para ello, he tomado como "Municipio de contraste" a "San Miguel de Abona" para comparar los resultados, ya que este municipio no destaca por su número de defunciones.
 
-### Ocupación laboral en San Miguel de Abona
+#### Ocupación laboral en San Miguel de Abona
 
 <img src="./img/puestos_abona.png" style="width:1100px">
 
 Se puede observar que el sector predominante en **San Miguel de Abona** es el sector "Servicios", seguido por el sector "Construcción". El sector "Construcción" y los demás sectores menos frecuentes no parecen ser muy representativos, pues apenas constituyen una décima parte del total de sectores.
 
-### Ocupación laboral en Puerto de La Cruz
+#### Ocupación laboral en Puerto de La Cruz
 
 <img src="./img/puestos_puerto_cruz.png" style="width:1100px">
 
@@ -83,31 +119,31 @@ La ocupación laboral mayoritaria en **Puerto de la Cruz** es mucho más marcada
 
 Puede que exista alguna relación aparente entre los tipos de puestos de trabajo y las defunciones por tumores o problemas circulatorios, pero con los datos disponibles no parece haberla.
 
-### Ocupación laboral en Fasnia
+#### Ocupación laboral en Fasnia
 
 <img src="./img/puestos_fasnia.png" style="width:1100px">
 
 El caso de **Fasnia** es el opuesto al puerto, pues la distribución de actividades económicas es más pareja. El sector "Servicios" sigue siendo el mayoritario, pero el resto de sectores combinados acumulan casi un quinto del total de trabajos. Con esta visualización podría ser interesante realizar un estudio sobre si el sector de la "Construcción" o la "industria" es más propenso a defunciones por riesgos circulatorios.
 
-## Distribución de edad en poblaciones afectadas
+### Distribución de edad en poblaciones afectadas
 
 Hasta ahora se ha observado una proporción de trabajadores del sector de la construcción y de la industria elevada en Fasnia, municipio afectado por muertes del sistema circulatorio. Sin embargo, las estadísticas del Puerto de la Cruz no parecen mostrar ese porcentaje de población.
 
 Buscando posibles relaciones entre datos, he analizado también la distribución de edades de las poblaciones afectadas en busca de posibles patrones de datos.
 
-### Patrones de edad en San Miguel de Abona
+#### Patrones de edad en San Miguel de Abona
 
 <img src="./img/distribucion_edad_abona.png" style="width:1100px">
 
 Se observa que la proporción de población de edad avanzada (65 años o más) en San Miguel de Abona es pequeña, mientras que la proporción de la población jóven (de 0 a 14 años) es elevada.
 
-### Patrones de edad en Puerto de la Cruz
+#### Patrones de edad en Puerto de la Cruz
 
 <img src="./img/distribucion_edad_puerto_cruz.png" style="width:1100px">
 
 La franja de edad avanzada en el municipio es bastante mayor, debido en parte a ser un municipio turístico donde residen muchos turistas ancianos.
 
-### Patrones de edad en Fasnia
+#### Patrones de edad en Fasnia
 
 <img src="./img/distribucion_edad_fasnia.png" style="width:1100px">
 
